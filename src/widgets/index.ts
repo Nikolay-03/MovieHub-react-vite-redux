@@ -1,0 +1,1 @@
+export {TopRatedMoviesList} from './TopRatedMoviesList/ui/TopRatedMoviesList'

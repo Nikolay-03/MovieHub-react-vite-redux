@@ -1,6 +1,6 @@
 import {$host} from "@/shared/api";
 
-export const getMovieInfo = async () => {
-    const response = await $host.get("movie/top_rated")
+export const getMovieInfo = async (id:number) => {
+    const response = await $host.get("movie/"+id)
     return response
 }

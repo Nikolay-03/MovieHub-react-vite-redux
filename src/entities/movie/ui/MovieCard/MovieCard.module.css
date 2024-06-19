@@ -1,0 +1,28 @@
+.movie__card__wrapper {
+    position: relative;
+    width: 240px;
+    height: 420px;
+    background-color: #1e1f1e;
+    margin-bottom: 20px;
+    border: 1px solid rgba(213, 217, 219, 0.2);
+}
+
+.movie__card__image {
+    width: 210px;
+    height: 320px;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-inline: auto;
+    border-radius: 7px;
+}
+.movie_name{
+    margin-left: 15px;
+    font-size: 14px;
+}
+.movie__info{
+    position: absolute;
+    bottom: 10px;
+    width: 210px;
+    left: 15px;
+}

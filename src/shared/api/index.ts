@@ -1,1 +1,2 @@
-export {$host,$image_host} from "./config"
+export {$host} from "./config"
+export {getImg} from './consts'
