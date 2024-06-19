@@ -22,6 +22,7 @@ export const MovieCard = ({id}) => {
                     <Duration runtime={data?.runtime}/>
                 </div>
             ):null}
+            <div className={styles.overlay}></div>
         </div>
     );
 };

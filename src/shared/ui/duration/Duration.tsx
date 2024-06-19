@@ -5,7 +5,7 @@ export const Duration = ({runtime}:{runtime:number}) => {
     const {hours,minutes} = timeFormation(runtime)
     return (
         <div className={styles.duration__wrapper}>
-            <AccessTimeFilledIcon fontSize='small'/>
+            <AccessTimeFilledIcon sx={{ fontSize: 15 }}/>
             <span>{`${hours}h ${minutes}min`}</span>
         </div>
     );

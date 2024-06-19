@@ -8,16 +8,19 @@ export const TopRatedMoviesList = () => {
         await getTopRatedMovies()
     )
     return (
-        <div className={styles.top__movies__list}>
-            {error ? (
-                <div>{error}</div>
-            ) : isLoading ? (
-                <div>Loading...</div>
-            ) : data && data.results ? (
-                data.results.map(movie =>
-                    <MovieCard id={movie.id} key={movie.id}/>
-                )
-            ) : null}
+        <div>
+            <h1>The best movies of all time</h1>
+            <div className={styles.top__movies__list}>
+                {error ? (
+                    <div>{error}</div>
+                ) : isLoading ? (
+                    <div>Loading...</div>
+                ) : data && data.results ? (
+                    data.results.map(movie =>
+                        <MovieCard id={movie.id} key={movie.id}/>
+                    )
+                ) : null}
+            </div>
         </div>
     );
 };
