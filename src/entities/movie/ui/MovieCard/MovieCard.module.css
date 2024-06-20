@@ -1,7 +1,7 @@
 .movie__card__wrapper {
     position: relative;
-    flex: 0 0 210px;
     height: 320px;
+    width: 210px;
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 20px;

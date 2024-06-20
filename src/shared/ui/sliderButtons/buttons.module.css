@@ -1,0 +1,43 @@
+.next__button__wrapper{
+    width: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, transparent, #161717);
+    height: 100%;
+}
+.next__button__content__wrapper{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #35373b;
+}
+.prev__button__wrapper{
+    width: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left, transparent, #161717);
+    height: 100%;
+}
+.prev__button__content__wrapper{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #35373b;
+}

@@ -1,0 +1,9 @@
+.slider__wrapper{
+    height: 320px;
+    width: 1150px;
+}
+
+.slick-slide > div{
+    margin: 0 5px;
+}
+
