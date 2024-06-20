@@ -19,11 +19,14 @@ export const Header = () => {
     ));
 
     return (
-        <nav className={styles.navigation__menu}>
-            <ul>
-                {navigationContent}
-            </ul>
-        </nav>
+        <div className={styles.header__wrapper}>
+            <h1>MovieHub</h1>
+            <nav className={styles.navigation__menu}>
+                <ul>
+                    {navigationContent}
+                </ul>
+            </nav>
+        </div>
     );
 };
 

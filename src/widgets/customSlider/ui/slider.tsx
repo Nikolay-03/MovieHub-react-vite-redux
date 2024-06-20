@@ -1,4 +1,4 @@
-import Slider from "react-slick";
+import Slider, {Settings} from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './slider.css'
@@ -6,7 +6,7 @@ import {NextButton, PrevButton} from "@/shared/ui";
 
 export const  CustomSlider = (props) => {
     const {slides} = props
-    const settings = {
+    const settings:Settings = {
         infinite: false,
         speed: 1000,
         slidesToShow: 5,
