@@ -3,7 +3,7 @@ import {useFetching} from "@/shared/hooks";
 import {getTopRatedMovies} from "@/widgets/TopRatedMoviesList/api/getTopRatedMovies.ts";
 import {TopRatedMoviesResponse} from "@/widgets/TopRatedMoviesList/model/topRatedMoviesResponse.ts";
 import styles from './TopRatedMoviesList.module.css'
-import {CustomSlider} from "@/widgets";
+import {CustomSlider} from "@/widgets/customSlider";
 
 export const TopRatedMoviesList = () => {
     const {data, isLoading, error} = useFetching<TopRatedMoviesResponse>(async () =>
@@ -18,7 +18,7 @@ export const TopRatedMoviesList = () => {
                     <div>Loading...</div>
                 ) : data && data.results ? (
                     <CustomSlider slides={data.results.map(movie =>
-                        <MovieCard id={movie.id} key={movie.id}/>
+                            <MovieCard id={movie.id} key={movie.id}/>
                     )}/>
                 ) : null}
         </div>

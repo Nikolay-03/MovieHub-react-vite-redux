@@ -1,13 +1,23 @@
 import {createBrowserRouter} from "react-router-dom";
 import {MAIN} from "@/app/router/routes.ts";
-import {CustomSlider} from "@/widgets/customSlider/ui/slider.tsx";
-import {TopRatedMoviesList} from "@/widgets";
+import {TopRatedMoviesList} from "@/widgets/TopRatedMoviesList";
+import {Header} from "@/widgets/header/ui/header.tsx";
 
 export const AppRouter = createBrowserRouter([
     {
         path: MAIN,
         element: (
-            <TopRatedMoviesList/>
+            <Header/>
     )},
+    {
+        path: '/top_rated',
+        element: (
+            <Header/>
+        )},
+    {
+        path: '/popular',
+        element: (
+            <Header/>
+        )},
 
 ])
