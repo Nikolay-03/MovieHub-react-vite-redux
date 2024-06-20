@@ -1,7 +1,7 @@
 import {useFetching} from "@/shared/hooks";
 import {getMovieInfo} from "@/entities/movie/api/getMovieInfo.ts";
 import {Movie} from "@/entities/movie/model/movie";
-import styles from './movieCard.module.css'
+import styles from './MovieCard.module.css'
 import {getImg} from "@/shared/api";
 import {Duration} from "@/shared/ui";
 
@@ -22,6 +22,7 @@ export const MovieCard = ({id}) => {
                     <Duration runtime={data?.runtime}/>
                 </div>
             ):null}
+            <div className={styles.overlay}></div>
         </div>
     );
 };

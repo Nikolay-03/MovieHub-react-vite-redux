@@ -1,8 +1,6 @@
 .top__movies__list{
-    width: 1020px;
-    display: grid;
-    grid-template-columns: 240px 240px 240px 240px;
-    gap: 20px;
+    height: 320px;
+    width: 1200px;
     margin-left: 200px;
     margin-top: 100px;
 }
