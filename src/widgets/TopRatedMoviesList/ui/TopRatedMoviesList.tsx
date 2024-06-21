@@ -1,9 +1,9 @@
 import {MovieCard} from "@/entities/movie";
 import {useFetching} from "@/shared/hooks";
-import {getTopRatedMovies} from "@/widgets/TopRatedMoviesList/api/getTopRatedMovies.ts";
-import {TopRatedMoviesResponse} from "@/widgets/TopRatedMoviesList/model/topRatedMoviesResponse.ts";
 import styles from './TopRatedMoviesList.module.css'
-import {CustomSlider} from "@/widgets/customSlider";
+import {SliderWithButtons} from "../../sliderWithButtons";
+import {getTopRatedMovies} from "@/shared/api";
+import {TopRatedMoviesResponse} from "@/shared/types";
 
 export const TopRatedMoviesList = () => {
     const {data, isLoading, error} = useFetching<TopRatedMoviesResponse>(async () =>
@@ -17,7 +17,7 @@ export const TopRatedMoviesList = () => {
                 ) : isLoading ? (
                     <div>Loading...</div>
                 ) : data && data.results ? (
-                    <CustomSlider slides={data.results.map(movie =>
+                    <SliderWithButtons slides={data.results.map(movie =>
                             <MovieCard id={movie.id} key={movie.id}/>
                     )}/>
                 ) : null}

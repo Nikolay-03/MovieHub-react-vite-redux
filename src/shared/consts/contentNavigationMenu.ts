@@ -1,4 +1,4 @@
-import {ContentNavigationMenu} from "@/shared/types/contentNavigationMenu.ts";
+import {ContentNavigationMenu} from "@/shared/types";
 
 export const CONTENT_NAVIGATION_MENU:ContentNavigationMenu[] = [
     {title:'Home',path:'/'},
