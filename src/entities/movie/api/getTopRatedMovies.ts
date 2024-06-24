@@ -1,5 +1,4 @@
-import {$host} from "@/shared/api";
-import {TopRatedMovies} from "@/shared/api/consts.ts";
+import {$host, TopRatedMovies} from "@/shared/api";
 
 
 export const getTopRatedMovies = async () => {

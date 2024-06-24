@@ -1,11 +1,16 @@
 .movie__card__wrapper {
     position: relative;
-    height: 320px;
-    width: 210px;
     border-radius: 10px;
     overflow: hidden;
 }
-
+.movie__card__wrapper__rectangle{
+    width: 320px;
+    height: 210px;
+}
+.movie__card__wrapper__elongated{
+    height: 320px;
+    width: 212px;
+}
 .movie__card__image {
     width: 100%;
     height: 100%;

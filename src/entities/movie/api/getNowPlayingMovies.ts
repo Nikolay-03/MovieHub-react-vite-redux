@@ -1,5 +1,4 @@
-import {$host} from "@/shared/api";
-import {NowPlaying} from "@/shared/api/consts.ts";
+import {$host, NowPlaying} from "@/shared/api";
 
 
 export const getNowPlayingMovies = async () => {
