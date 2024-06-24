@@ -18,7 +18,7 @@ export const MovieBanner = ({id}) => {
                 <div className={styles.movie__banner__content}>
                         {data.original_title && <h1>{data.original_title}</h1>}
                         <div className={styles.movie__banner__main__info}>
-                            {data.runtime && <Duration runtime={data.runtime}/>}
+                            {data.runtime !==0 && <Duration runtime={data.runtime}/>}
                             {data.release_date && <span>{data.release_date.slice(0, 4)}</span>}
                             {data.genres.map(genre =>
                                 <span className={styles.movie__banner__genres}>

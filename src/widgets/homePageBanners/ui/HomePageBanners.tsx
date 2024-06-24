@@ -1,10 +1,10 @@
 import {useFetching} from "@/shared/hooks";
 import styles from './homePageBanners.module.css'
-import {getUpcomingMovies, MovieBanner, UpcomingMoviesResponse} from "@/entities/movie";
+import {getUpcomingMovies, IUpcomingMoviesResponse, MovieBanner} from "@/entities/movie";
 import {AutoPlaySlider} from "@/shared/ui";
 import {AddToWatchList} from "@/features/movie";
 export const HomePageBanners = () => {
-    const {data,isLoading,error} = useFetching<UpcomingMoviesResponse>(async () =>
+    const {data,isLoading,error} = useFetching<IUpcomingMoviesResponse>(async () =>
         await getUpcomingMovies()
     )
     return (
@@ -14,9 +14,6 @@ export const HomePageBanners = () => {
                     <MovieBanner id={movie.id}/>
                     <div className={styles.action__buttons}>
                         <AddToWatchList className={styles.add__to__watchlist}/>
-                        <AddToWatchList className={styles.add__to__watchlist}/>
-                        <AddToWatchList className={styles.add__to__watchlist}/>
-
                     </div>
                 </div>
             )}/>

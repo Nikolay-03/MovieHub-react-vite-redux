@@ -1,6 +1,6 @@
-import {Movie} from "@/entities/movie/model/movie.ts";
+import {Movie} from "@/entities/movie/model/movie";
 
-export interface TopRatedMoviesResponse{
+export interface ITopRatedMoviesResponse{
     page:number
     results:Movie[]
 }
