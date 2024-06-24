@@ -2,7 +2,7 @@ import Slider, {Settings} from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './autoPlaySlider.css'
-export const AutoPlaySlider = (props) => {
+export const AutoPlaySlider = (props:any) => {
     const {slides} = props
     const settings:Settings = {
         dots: true,

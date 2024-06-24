@@ -1,9 +1,9 @@
 import {getTopRatedMovies, ITopRatedMoviesResponse, MovieCard} from "@/entities/movie";
 import {useFetching} from "@/shared/hooks";
-import styles from './TopRatedMoviesList.module.css'
+import styles from './TopRatedMoviesSlides.module.css'
 import {SliderWithButtons} from "@/shared/ui";
 
-export const TopRatedMoviesList = () => {
+export const TopRatedMoviesSlides = () => {
     const {data, isLoading, error} = useFetching<ITopRatedMoviesResponse>(async () =>
         await getTopRatedMovies()
     )

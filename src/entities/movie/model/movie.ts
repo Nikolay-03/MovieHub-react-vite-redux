@@ -4,7 +4,7 @@ type genre = {
     name:string
 }
 
-export interface Movie{
+export interface IMovie{
     backdrop_path:string
     budget:number
     genres:genre[]

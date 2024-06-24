@@ -1,0 +1,1 @@
+export {NowPlayingMoviesSlides} from './ui/NowPlayingMoviesSlides'
