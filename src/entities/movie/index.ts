@@ -1,2 +1,6 @@
 export {MovieCard} from './ui/movieCard/movieCard'
 export {MovieBanner} from './ui/movieBanner/MovieBanner'
+export {getTopRatedMovies} from './api/getTopRatedMovies'
+export {getUpcomingMovies} from './api/getUpcomingMovies.ts'
+export {TopRatedMoviesResponse} from './model/topRatedMoviesResponse'
+export {UpcomingMoviesResponse} from './model/upcomingMoviesResponse'

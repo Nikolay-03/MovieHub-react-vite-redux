@@ -1,8 +1,29 @@
 .home__page__banners__wrapper{
-    height: 400px;
+    height: 600px;
     position: absolute;
     top: 0;
     left: 0;
     margin: 0;
     width: 100%;
+}
+.movie_banner{
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+.action__buttons{
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+.add__to__watchlist{
+    border: 1px solid #fff;
+    background: transparent;
+    border-radius: 7px;
+    color:white;
+    z-index: 1;
 }
