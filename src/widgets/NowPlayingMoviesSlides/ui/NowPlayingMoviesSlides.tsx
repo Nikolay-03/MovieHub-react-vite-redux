@@ -16,8 +16,8 @@ export const NowPlayingMoviesSlides = () => {
             ) : isLoading ? (
                 <div>Loading...</div>
             ) : data && data.results ? (
-                <SliderWithButtons slidesToShow={4} slidesToScroll={4} slides={data.results.map(movie =>
-                    <MovieCard id={movie.id} key={movie.id} view={ViewCard.RECTANGLE}/>
+                <SliderWithButtons slidesToShow={6} slidesToScroll={6} slides={data.results.map(movie =>
+                    <MovieCard id={movie.id} key={movie.id} view={ViewCard.ELONGATED}/>
                 )}/>
             ) : null}
         </div>

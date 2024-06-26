@@ -8,8 +8,8 @@ export const Home = () => {
         <div className={styles.home__page__wrapper}>
             <Header/>
             <HomePageBanners/>
-            <TopRatedMoviesSlides/>
             <NowPlayingMoviesSlides/>
+            <TopRatedMoviesSlides/>
         </div>
     );
 };
