@@ -1,0 +1,1 @@
+export {PopularMoviesSlides} from './ui/PopularMoviesSlides'

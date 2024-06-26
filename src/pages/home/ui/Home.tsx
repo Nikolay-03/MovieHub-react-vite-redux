@@ -3,6 +3,7 @@ import {HomePageBanners} from "@/widgets/homePageBanners";
 import {Header} from "@/widgets/header";
 import {NowPlayingMoviesSlides} from "@/widgets/NowPlayingMoviesSlides";
 import {TopRatedMoviesSlides} from "@/widgets/TopRatedMoviesSlides";
+import {PopularMoviesSlides} from "@/widgets/PopularMoviesSlides";
 export const Home = () => {
     return (
         <div className={styles.home__page__wrapper}>
@@ -10,6 +11,7 @@ export const Home = () => {
             <HomePageBanners/>
             <NowPlayingMoviesSlides/>
             <TopRatedMoviesSlides/>
+            <PopularMoviesSlides/>
         </div>
     );
 };
