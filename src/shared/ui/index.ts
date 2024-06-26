@@ -1,5 +1,5 @@
 export {Duration} from '@/shared/ui/duration/Duration'
 export {NextButton,PrevButton} from './sliderButtons/customSliderButtons'
-export {AutoPlaySlider} from './autoPlaySlider/ui/autoPlaySlider'
-export {SliderWithButtons} from './sliderWithButtons/ui/slider'
+export {AutoPlaySlider} from './autoPlaySlider/autoPlaySlider'
+export {SliderWithButtons} from './sliderWithButtons/slider'
 export {Button} from './Button/Button'

@@ -3,7 +3,7 @@ import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 interface IAddToWatchList{
     className?:string
 }
-export const AddToWatchList = (props) => {
+export const AddToWatchList = (props:IAddToWatchList) => {
     const {className} = props
     return (
         <Button onClick={() => console.log(1)} Icon={BookmarkBorderIcon} className={className}>

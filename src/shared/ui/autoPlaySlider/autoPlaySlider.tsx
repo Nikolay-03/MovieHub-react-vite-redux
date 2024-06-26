@@ -2,8 +2,10 @@ import Slider, {Settings} from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './autoPlaySlider.css'
-export const AutoPlaySlider = (props:any) => {
-    const {slides} = props
+interface IAutoPlaySliderProps {
+    slides: React.ReactNode[]; // Типизируем slides как массив React элементов
+}
+export const AutoPlaySlider = ({slides} : IAutoPlaySliderProps) => {
     const settings:Settings = {
         dots: true,
         pauseOnHover: true,

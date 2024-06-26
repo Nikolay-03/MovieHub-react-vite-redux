@@ -1,5 +1,4 @@
-import {$host} from "@/shared/api/config.ts";
-import {UpcomingMovies} from "@/shared/api";
+import {$host, UpcomingMovies} from "@/shared/api";
 
 export const getUpcomingMovies = async () => {
     const response = await $host.get(UpcomingMovies)

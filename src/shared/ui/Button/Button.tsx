@@ -1,9 +1,11 @@
 import {FC} from "react";
 import clsx from "clsx";
 import styles from './button.module.css'
+import {SvgIconTypeMap} from "@mui/material";
+import {OverridableComponent} from "@mui/material/OverridableComponent";
 interface IButton {
     children: string,
-    Icon?: React.FunctionComponent<React.SVGProps<SVGSVGElement>>,
+    Icon?: OverridableComponent<SvgIconTypeMap<{}, "svg">> & {     muiName: string; }
     className?: string,
     onClick?: () => void,
     disabled?: boolean

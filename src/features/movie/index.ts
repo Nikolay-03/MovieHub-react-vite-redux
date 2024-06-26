@@ -1,1 +1,1 @@
-export {AddToWatchList} from './addToWatchList'
+export {AddToWatchList} from './ui/addToWatchList'

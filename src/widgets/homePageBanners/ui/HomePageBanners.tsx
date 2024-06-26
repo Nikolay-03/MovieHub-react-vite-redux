@@ -3,20 +3,23 @@ import styles from './homePageBanners.module.css'
 import {getUpcomingMovies, IUpcomingMoviesResponse, MovieBanner} from "@/entities/movie";
 import {AutoPlaySlider} from "@/shared/ui";
 import {AddToWatchList} from "@/features/movie";
-export const HomePageBanners = () => {
+export const HomePageBanners: React.FC = () => {
     const {data,isLoading,error} = useFetching<IUpcomingMoviesResponse>(async () =>
         await getUpcomingMovies()
     )
     return (
         <div className={styles.home__page__banners__wrapper}>
-            <AutoPlaySlider slides={data?.results.map(movie =>
-                <div className={styles.movie_banner}>
-                    <MovieBanner id={movie.id}/>
-                    <div className={styles.action__buttons}>
-                        <AddToWatchList className={styles.add__to__watchlist}/>
+            {error && <div>{error}</div>}
+            {isLoading? <div>Loading...</div>
+                : data && data.results && <AutoPlaySlider slides={data.results.map(movie =>
+                    <div className={styles.movie_banner}>
+                        <MovieBanner id={movie.id}/>
+                        <div className={styles.action__buttons}>
+                            <AddToWatchList className={styles.add__to__watchlist}/>
+                        </div>
                     </div>
-                </div>
-            )}/>
+                )}/>
+            }
         </div>
     );
 };

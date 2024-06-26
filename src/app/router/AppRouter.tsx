@@ -1,7 +1,7 @@
 import {createBrowserRouter} from "react-router-dom";
 import {MAIN} from "@/app/router/routes.ts";
-import {Header} from "@/widgets/header/ui/header.tsx";
 import {Home} from "@/pages/home";
+import {Header} from "@/widgets/header";
 
 export const AppRouter = createBrowserRouter([
     {

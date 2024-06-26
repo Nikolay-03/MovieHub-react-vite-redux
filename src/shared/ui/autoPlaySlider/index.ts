@@ -1,1 +1,0 @@
-export {AutoPlaySlider} from './ui/autoPlaySlider'
