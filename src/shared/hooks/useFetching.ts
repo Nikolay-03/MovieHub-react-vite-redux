@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {AxiosResponse} from "axios";
 
-export const useFetching = <T>(requestCallback:()=>Promise<AxiosResponse>) => {
+export const useFetching = <T>(requestCallback:()=>Promise<AxiosResponse<T>>) => {
     const [data,setData] = useState<null| T>(null)
     const [isLoading,setIsLoading] = useState<boolean>(false)
     const [error,setError] = useState<string>('')
@@ -9,8 +9,8 @@ export const useFetching = <T>(requestCallback:()=>Promise<AxiosResponse>) => {
         const fetching = async () => {
             setIsLoading(true)
             try{
-                await requestCallback().then(res => setData(res.data))
-
+                const response = await requestCallback();
+                setData(response.data);
             }
             catch (e:any){
                 setError(e.message)

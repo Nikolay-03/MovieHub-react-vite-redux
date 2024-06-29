@@ -1,2 +1,2 @@
 export {$host} from "./config"
-export {getImg,NowPlaying, UpcomingMovies, TopRatedMovies} from './consts'
+export {getImg,NowPlayingMovies, UpcomingMovies, TopRatedMovies} from './consts'

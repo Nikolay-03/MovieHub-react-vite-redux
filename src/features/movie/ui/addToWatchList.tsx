@@ -6,7 +6,7 @@ interface IAddToWatchList{
 export const AddToWatchList = (props:IAddToWatchList) => {
     const {className} = props
     return (
-        <Button onClick={() => console.log(1)} Icon={BookmarkBorderIcon} className={className}>
+        <Button Icon={BookmarkBorderIcon} className={className}>
             Add to watchlist
         </Button>
     );

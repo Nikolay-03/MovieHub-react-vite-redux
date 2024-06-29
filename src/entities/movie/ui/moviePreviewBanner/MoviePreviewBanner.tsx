@@ -1,11 +1,11 @@
-import styles from './movieBanner.module.css'
+import styles from './moviePreviewBanner.module.css'
 import {useFetching} from "@/shared/hooks";
 import {IMovie} from "@/entities/movie/model/movie.ts";
 import {getMovieInfo} from "@/entities/movie/api/getMovieInfo.ts";
 import {getImg} from "@/shared/api";
 import {Duration} from "@/shared/ui";
 
-export const MovieBanner = ({id}:{id: number}) => {
+export const MoviePreviewBanner = ({id}:{id:number}) => {
     const {data, isLoading, error} = useFetching<IMovie>(async () =>
         await getMovieInfo(id)
     )

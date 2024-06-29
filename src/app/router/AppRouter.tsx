@@ -1,11 +1,12 @@
 import {createBrowserRouter} from "react-router-dom";
-import {MAIN} from "@/app/router/routes.ts";
+import {HOME, MOVIE_PAGE} from "@/app/router/routes.ts";
 import {Home} from "@/pages/home";
 import {Header} from "@/widgets/header";
+import {MoviePage} from "@/pages/movie/ui/MoviePage.tsx";
 
 export const AppRouter = createBrowserRouter([
     {
-        path: MAIN,
+        path: HOME,
         element: (
             <Home/>
     )},
@@ -19,5 +20,11 @@ export const AppRouter = createBrowserRouter([
         element: (
             <Header/>
         )},
+    {
+        path:MOVIE_PAGE,
+        element:(
+            <MoviePage/>
+        )
+    }
 
 ])

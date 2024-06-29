@@ -1,6 +1,7 @@
 .header__wrapper{
     width: 95%;
     display: flex;
+    position: absolute;
     height: 60px;
     z-index: 2;
     background: transparent;

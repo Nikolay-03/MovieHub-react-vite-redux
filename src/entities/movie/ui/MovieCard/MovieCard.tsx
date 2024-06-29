@@ -1,11 +1,12 @@
 import {useFetching} from "@/shared/hooks";
-import {getMovieInfo} from "@/entities/movie/api/getMovieInfo.ts";
 import styles from './MovieCard.module.css'
 import {Duration} from "@/shared/ui";
 import {IMovie} from "@/entities/movie/model/movie.ts";
 import clsx from "clsx";
 import {ViewCard} from "@/shared/consts";
 import {getImg} from "@/shared/api";
+import {useNavigate} from "react-router-dom";
+import {getMovieInfo} from "@/entities/movie";
 
 interface IMovieCardProps{
     id:number,
@@ -15,9 +16,11 @@ export const MovieCard = ({id,view}:IMovieCardProps) => {
     const {data, isLoading, error} = useFetching<IMovie>(async () =>
         await getMovieInfo(id)
     )
-    console.log(`styles.movie__card__wrapper__${view}`)
+    const navigate = useNavigate()
     return (
-        <div className={clsx(
+        <div
+            onClick={() => navigate(`/movie/`+id)}
+            className={clsx(
             styles.movie__card__wrapper,
             view === ViewCard.ELONGATED ? styles.movie__card__wrapper__elongated : styles.movie__card__wrapper__rectangle
         )}>
