@@ -2,7 +2,7 @@ import {createBrowserRouter} from "react-router-dom";
 import {HOME, MOVIE_PAGE} from "@/app/router/routes.ts";
 import {Home} from "@/pages/home";
 import {Header} from "@/widgets/header";
-import {MoviePage} from "@/pages/movie/ui/MoviePage.tsx";
+import {MoviePage} from "@/pages/movie";
 
 export const AppRouter = createBrowserRouter([
     {
