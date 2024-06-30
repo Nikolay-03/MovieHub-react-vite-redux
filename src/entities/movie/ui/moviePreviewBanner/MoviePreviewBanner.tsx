@@ -4,13 +4,15 @@ import {IMovie} from "@/entities/movie/model/movie.ts";
 import {getMovieInfo} from "@/entities/movie/api/getMovieInfo.ts";
 import {getImg} from "@/shared/api";
 import {Duration} from "@/shared/ui";
+import {useNavigate} from "react-router-dom";
 
 export const MoviePreviewBanner = ({id}:{id:number}) => {
     const {data, isLoading, error} = useFetching<IMovie>(async () =>
         await getMovieInfo(id)
     )
+    const navigate=useNavigate()
     return (
-        <div className={styles.movie__banner__wrapper}>
+        <div className={styles.movie__banner__wrapper} onClick={() => navigate('/movie/'+data?.id)}>
             {error ? <div>{error}</div> :
                 isLoading ? <div>Loading...</div>
                     : data && data.backdrop_path && <img src={getImg + data?.backdrop_path} alt={data?.original_title}/>}

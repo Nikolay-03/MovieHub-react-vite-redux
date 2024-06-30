@@ -4,8 +4,11 @@ import {useParams} from "react-router-dom";
 import {Header} from "@/widgets/header";
 import {useFetching} from "@/shared/hooks";
 import CircularProgress from '@mui/material/CircularProgress';
-import {getMovieInfo, IMovie, MovieOverview} from "@/entities/movie";
+import {getMovieInfo, getRecommendations, IMovie, MovieOverview} from "@/entities/movie";
 import {ActorsList} from "@/widgets/actorsList";
+import {MovieSlider} from "@/widgets/movieSlider";
+import {ViewCard} from "@/shared/consts";
+
 export const MoviePage = () => {
     const {id} = useParams()
     const {data, isLoading, error} = useFetching<IMovie>(async () =>
@@ -35,6 +38,13 @@ export const MoviePage = () => {
             }
             {data && data.overview && <MovieOverview overview={data.overview}/>}
             <ActorsList id={id}/>
+            <MovieSlider
+                title={'Recommendations'}
+                dataRequest={() => getRecommendations(id)}
+                slidesToShow={6}
+                slidesToScroll={6}
+                view={ViewCard.ELONGATED}
+            />
         </div>
     );
 };
