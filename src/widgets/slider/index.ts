@@ -1,1 +1,0 @@
-export {MovieSlider} from './ui/slider'

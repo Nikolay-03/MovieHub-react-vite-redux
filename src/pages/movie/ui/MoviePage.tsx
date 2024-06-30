@@ -5,6 +5,7 @@ import {Header} from "@/widgets/header";
 import {useFetching} from "@/shared/hooks";
 import CircularProgress from '@mui/material/CircularProgress';
 import {getMovieInfo, IMovie, MovieOverview} from "@/entities/movie";
+import {ActorsList} from "@/widgets/actorsList";
 export const MoviePage = () => {
     const {id} = useParams()
     const {data, isLoading, error} = useFetching<IMovie>(async () =>
@@ -33,6 +34,7 @@ export const MoviePage = () => {
                 />
             }
             {data && data.overview && <MovieOverview overview={data.overview}/>}
+            <ActorsList id={id}/>
         </div>
     );
 };

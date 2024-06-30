@@ -1,4 +1,4 @@
-import styles from './slider.module.css';
+import styles from './movieSlider.module.css';
 import { SliderWithButtons } from "@/shared/ui";
 import { ViewCard } from "@/shared/consts";
 import { useFetching } from "@/shared/hooks";

@@ -5,3 +5,4 @@ export const NowPlayingMovies = '/movie/now_playing'
 export const Popular = '/movie/popular'
 
 export const MovieListGenres = '/genre/movie/list'
+

@@ -1,7 +1,7 @@
 import styles from '../../styles/page.module.css'
 import {HomePageBanners} from "@/widgets/homePageBanners";
 import {Header} from "@/widgets/header";
-import {MovieSlider} from "@/widgets/slider";
+import {MovieSlider} from "../../../widgets/movieSlider";
 import {getMovieList} from "@/entities/movie";
 import {NowPlayingMovies, TopRatedMovies, UpcomingMovies} from "@/shared/api";
 import {ViewCard} from "@/shared/consts";
