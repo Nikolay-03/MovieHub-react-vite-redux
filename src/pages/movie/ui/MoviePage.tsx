@@ -11,9 +11,7 @@ import {ViewCard} from "@/shared/consts";
 
 export const MoviePage = () => {
     const {id} = useParams()
-    const {data, isLoading, error} = useFetching<IMovie>(async () =>
-        await getMovieInfo(id)
-    )
+    const {data, isLoading, error} = useFetching<IMovie>(async () => await getMovieInfo(id),[id])
     if (isLoading){
         return (
             <div className={styles.page__loading}>
