@@ -13,7 +13,7 @@ interface IMovieCardProps{
     view:ViewCard.ELONGATED | ViewCard.RECTANGLE
 }
 export const MovieCard = ({id,view}:IMovieCardProps) => {
-    const {data, isLoading, error} = useFetching<IMovie>(async () =>
+    const {data} = useFetching<IMovie>(async () =>
         await getMovieInfo(id)
     )
     const navigate = useNavigate()
