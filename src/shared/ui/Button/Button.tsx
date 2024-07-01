@@ -3,9 +3,10 @@ import clsx from "clsx";
 import styles from './button.module.css'
 import {SvgIconTypeMap} from "@mui/material";
 import {OverridableComponent} from "@mui/material/OverridableComponent";
+
 interface IButton {
     children: string,
-    Icon?: OverridableComponent<SvgIconTypeMap<{}, "svg">> & {     muiName: string; }
+    Icon?: OverridableComponent<SvgIconTypeMap<{}, "svg">> & { muiName: string; }
     className?: string,
     onClick?: () => void,
     disabled?: boolean
