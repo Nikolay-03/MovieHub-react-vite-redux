@@ -7,9 +7,7 @@ import {Duration} from "@/shared/ui";
 import {useNavigate} from "react-router-dom";
 
 export const MoviePreviewBanner = ({id}:{id:number}) => {
-    const {data, isLoading, error} = useFetching<IMovie>(async () =>
-        await getMovieInfo(id)
-    )
+    const {data, isLoading, error} = useFetching<IMovie>(async () => await getMovieInfo(id),[id])
     const navigate=useNavigate()
     return (
         <div className={styles.movie__banner__wrapper} onClick={() => navigate('/movie/'+data?.id)}>

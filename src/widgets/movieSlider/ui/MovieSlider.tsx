@@ -17,7 +17,7 @@ export const MovieSlider = <T extends { results: IMovie[] }>({ title, dataReques
     const { data, isLoading, error } = useFetching<T>(dataRequest);
     return (
         <div className={styles.movie__slider__wrapper}>
-            <h3>{title}</h3>
+            {title &&<h3>{title}</h3>}
             {error ? (
                 <div>{error}</div>
             ) : isLoading ? (

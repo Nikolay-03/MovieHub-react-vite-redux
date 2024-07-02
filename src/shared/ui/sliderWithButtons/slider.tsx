@@ -16,7 +16,7 @@ export const  SliderWithButtons = ({slides,slidesToShow,slidesToScroll}:ISliderW
         slidesToScroll: slidesToScroll,
         prevArrow: <PrevButton />
     };
-    settings.nextArrow = <NextButton slidesToShow={settings.slidesToShow}/>
+    settings.nextArrow = <NextButton slidesToShow={settings.slidesToShow} onClick={() => console.log(3)}/>
     return (
         <div className='slider__wrapper'>
             <Slider {...settings}>

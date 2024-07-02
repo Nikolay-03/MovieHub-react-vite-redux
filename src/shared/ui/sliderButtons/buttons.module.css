@@ -1,7 +1,7 @@
 .next__button__wrapper{
-    width: 100px;
+    width: 40px;
     position: absolute;
-    right:-20px;
+    right:0;
     top: 0;
     display: flex;
     justify-content: center;
@@ -20,7 +20,7 @@
     background: #35373b;
 }
 .prev__button__wrapper{
-    width: 60px;
+    width: 40px;
     position: absolute;
     left: 0;
     top: 0;
