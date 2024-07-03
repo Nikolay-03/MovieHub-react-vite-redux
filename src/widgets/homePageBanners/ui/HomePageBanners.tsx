@@ -14,9 +14,9 @@ export const HomePageBanners: React.FC = () => {
             {isLoading? <div>Loading...</div>
                 : data && data.results && <AutoPlaySlider slides={data.results.map(movie =>
                     <div className={styles.movie_banner}>
-                        <MoviePreviewBanner id={movie.id}/>
+                        <MoviePreviewBanner id={movie.id} key={movie.id}/>
                         <div className={styles.action__buttons}>
-                            <AddToWatchList className={styles.add__to__watchlist}/>
+                            <AddToWatchList className={styles.add__to__watchlist} key={movie.id}/>
                         </div>
                     </div>
                 )}/>

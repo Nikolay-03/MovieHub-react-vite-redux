@@ -1,2 +1,4 @@
 export {$host} from "./config"
-export {getImg,NowPlayingMovies, UpcomingMovies, TopRatedMovies,PopularMovies} from './consts'
+export {AiringTodaySeries,TopRatedSeries,OnTheAirSeries,PopularSeries} from './seriesConsts.ts'
+export {getImg} from './images.ts'
+export {NowPlayingMovies, UpcomingMovies, TopRatedMovies,PopularMovies} from './movieConsts'

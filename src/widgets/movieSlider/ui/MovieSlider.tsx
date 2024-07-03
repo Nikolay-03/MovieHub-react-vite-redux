@@ -3,17 +3,17 @@ import { SliderWithButtons } from "@/shared/ui";
 import { ViewCard } from "@/shared/consts";
 import { useFetching } from "@/shared/hooks";
 import { AxiosResponse } from "axios";
-import {IMovie, MovieCard} from "@/entities/movie";
+import {IMovie, IMovieList, MovieCard} from "@/entities/movie";
 
 interface ISliderProps<T> {
     title: string;
     dataRequest: () => Promise<AxiosResponse<T>>;
     slidesToShow:number;
     slidesToScroll:number;
-    view:ViewCard;
+    view:ViewCard.ELONGATED | ViewCard.RECTANGLE;
 }
 
-export const MovieSlider = <T extends { results: IMovie[] }>({ title, dataRequest,slidesToShow,slidesToScroll,view}: ISliderProps<T>) => {
+export const MovieSlider = <T extends IMovieList>({ title, dataRequest,slidesToShow,slidesToScroll,view}: ISliderProps<T>) => {
     const { data, isLoading, error } = useFetching<T>(dataRequest);
     return (
         <div className={styles.movie__slider__wrapper}>

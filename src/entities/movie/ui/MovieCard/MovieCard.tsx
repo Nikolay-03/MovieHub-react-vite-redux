@@ -24,7 +24,7 @@ export const MovieCard = ({id,view}:IMovieCardProps) => {
             styles.movie__card__wrapper,
             view === ViewCard.ELONGATED ? styles.movie__card__wrapper__elongated : styles.movie__card__wrapper__rectangle
         )}>
-            {data?.poster_path ? (
+            {data?.poster_path && data.backdrop_path? (
                     <img src={view === ViewCard.RECTANGLE? getImg+data.backdrop_path : getImg+data.poster_path} alt="" className={styles.movie__card__image}/>
             ) : null}
             {data?.original_title?(

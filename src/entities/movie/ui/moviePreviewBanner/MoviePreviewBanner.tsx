@@ -5,6 +5,7 @@ import {getMovieInfo} from "@/entities/movie/api/getMovieInfo.ts";
 import {getImg} from "@/shared/api";
 import {Duration} from "@/shared/ui";
 import {useNavigate} from "react-router-dom";
+import {IGenre} from "@/shared/types";
 
 export const MoviePreviewBanner = ({id}:{id:number}) => {
     const {data, isLoading, error} = useFetching<IMovie>(async () => await getMovieInfo(id),[id])
@@ -20,8 +21,8 @@ export const MoviePreviewBanner = ({id}:{id:number}) => {
                         <div className={styles.movie__banner__main__info}>
                             {data.runtime !==0 && <Duration runtime={data.runtime}/>}
                             {data.release_date && <span>{data.release_date.slice(0, 4)}</span>}
-                            {data.genres.map(genre =>
-                                <span className={styles.movie__banner__genres}>
+                            {data.genres.map((genre:IGenre) =>
+                                <span className={styles.movie__banner__genres} key={genre.id}>
                                     <h3>•</h3>
                                     <span>{genre.name}</span>
                                 </span>
