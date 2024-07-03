@@ -1,10 +1,10 @@
 import styles from '../../styles/page.module.css'
 import {HomePageBanners} from "@/widgets/homePageBanners";
 import {Header} from "@/widgets/header";
-import {MovieSlider} from "../../../widgets/movieSlider";
 import {getMovieList} from "@/entities/movie";
-import {NowPlayingMovies, Popular, TopRatedMovies, UpcomingMovies} from "@/shared/api";
+import {NowPlayingMovies, PopularMovies, TopRatedMovies, UpcomingMovies} from "@/shared/api";
 import {ViewCard} from "@/shared/consts";
+import {MovieSlider} from "@/widgets/movieSlider";
 
 export const Home = () => {
     return (
@@ -34,7 +34,7 @@ export const Home = () => {
             />
             <MovieSlider
                 title={'Popular'}
-                dataRequest={() => getMovieList(Popular)}
+                dataRequest={() => getMovieList(PopularMovies)}
                 slidesToShow={6}
                 slidesToScroll={6}
                 view={ViewCard.ELONGATED}/>

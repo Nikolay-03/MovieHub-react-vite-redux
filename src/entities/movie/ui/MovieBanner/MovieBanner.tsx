@@ -1,7 +1,7 @@
 import styles from './movieBanner.module.css'
 import {getImg} from "@/shared/api";
 import {Duration} from "@/shared/ui";
-import {IGenre} from "@/entities/movie";
+import {IGenre} from "@/shared/types";
 
 interface IMovieBannerProps{
     original_title: string,
