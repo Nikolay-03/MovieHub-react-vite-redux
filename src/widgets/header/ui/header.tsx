@@ -1,5 +1,5 @@
 import { CONTENT_NAVIGATION_MENU } from "@/shared/consts";
-import { NavLink } from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 import styles from './header.module.css';
 import clsx from "clsx";
 
@@ -17,10 +17,10 @@ export const Header = () => {
             </NavLink>
         </li>
     ));
-
+    const navigate = useNavigate()
     return (
         <div className={styles.header__wrapper}>
-            <h1>MovieHub</h1>
+            <h1 onClick={() => navigate(CONTENT_NAVIGATION_MENU[0].path)}>MovieHub</h1>
             <nav className={styles.navigation__menu}>
                 <ul>
                     {navigationContent}

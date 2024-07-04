@@ -1,0 +1,10 @@
+.movie__overview__wrapper{
+    width: 95%;
+}
+.movie__overview__wrapper h3{
+    margin-block: 10px;
+}
+.movie__overview__content{
+    color: #a3a3a3;
+    font-size: 14px;
+}

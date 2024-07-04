@@ -1,13 +1,10 @@
+import {IGenre} from "@/entities/movie";
 
-type genre = {
-    id:number,
-    name:string
-}
 
-export interface Movie{
+export interface IMovie{
     backdrop_path:string
     budget:number
-    genres:genre[]
+    genres:IGenre[]
     id:number
     origin_country:string[]
     original_language:string

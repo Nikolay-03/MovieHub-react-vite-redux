@@ -1,0 +1,15 @@
+.rating__wrapper{
+    width: 50px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.rating__image{
+    opacity: 0.8;
+    width: 25px;
+    height: 25px;
+}
+.rating_value{
+    font-size: 14px;
+}

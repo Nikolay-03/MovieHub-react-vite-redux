@@ -1,0 +1,1 @@
+export {MoviePageBanner} from './ui/MoviePageBanner'

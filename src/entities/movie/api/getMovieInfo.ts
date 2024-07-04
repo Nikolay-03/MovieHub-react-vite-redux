@@ -1,6 +1,7 @@
 import {$host} from "@/shared/api";
-
-export const getMovieInfo = async (id:number) => {
-    const response = await $host.get("movie/"+id)
+import {AxiosResponse} from "axios";
+import {IMovie} from "@/entities/movie";
+export const getMovieInfo = async (id:number | string | undefined):Promise<AxiosResponse<IMovie>> => {
+    const response = await $host.get<IMovie>(`/movie/${id}`)
     return response
 }

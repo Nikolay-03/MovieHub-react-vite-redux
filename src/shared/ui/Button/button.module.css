@@ -1,0 +1,13 @@
+.button__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.button__disabled{
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+}

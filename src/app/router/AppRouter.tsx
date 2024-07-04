@@ -1,13 +1,15 @@
 import {createBrowserRouter} from "react-router-dom";
-import {MAIN} from "@/app/router/routes.ts";
-import {TopRatedMoviesList} from "@/widgets/TopRatedMoviesList";
-import {Header} from "@/widgets/header/ui/header.tsx";
+import {HOME, MOVIE_PAGE, SERIES_PAGE} from "@/app/router/routes.ts";
+import {Home} from "@/pages/home";
+import {Header} from "@/widgets/header";
+import {MoviePage} from "@/pages/movie";
+import {SeriesPage} from "@/pages/series";
 
 export const AppRouter = createBrowserRouter([
     {
-        path: MAIN,
+        path: HOME,
         element: (
-            <Header/>
+            <Home/>
     )},
     {
         path: '/top_rated',
@@ -19,5 +21,15 @@ export const AppRouter = createBrowserRouter([
         element: (
             <Header/>
         )},
+    {
+        path:MOVIE_PAGE,
+        element:(
+            <MoviePage/>
+        )
+    },
+    {
+        path:SERIES_PAGE,
+        element:<SeriesPage/>
+    }
 
 ])
