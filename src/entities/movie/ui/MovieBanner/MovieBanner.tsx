@@ -3,7 +3,7 @@ import {getImg} from "@/shared/api";
 import {Duration} from "@/shared/ui";
 import {IGenre} from "@/shared/types";
 
-interface IMovieBannerProps{
+interface IMovieBannerProps {
     original_title: string,
     backdrop_path: string,
     duration: number,
@@ -24,7 +24,7 @@ export const MovieBanner = ({original_title, backdrop_path, duration, genres, re
                         <span className={styles.movie__banner__genres}>
                                     <h3>•</h3>
                                     <span>{genre.name}</span>
-                                </span>
+                        </span>
                     )}
                 </div>
             </div>

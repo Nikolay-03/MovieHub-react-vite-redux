@@ -31,6 +31,7 @@ export const SeriesSlider = <T extends ISeriesList>({ title, dataRequest,slidesT
                             image_path={view === ViewCard.RECTANGLE? series.backdrop_path : series.poster_path}
                             vote_average={series.vote_average}
                             view={view}
+                            id={series.id}
                             key={series.id}
                         />
                     ))}

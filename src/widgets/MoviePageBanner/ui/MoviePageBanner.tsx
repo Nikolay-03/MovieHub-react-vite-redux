@@ -1,6 +1,7 @@
 import styles from "./MoviePageBanner.module.css";
 import {AddToWatchList} from "@/features/movie";
-import {IGenre, MovieBanner} from "@/entities/movie";
+import {MovieBanner} from "@/entities/movie";
+import {IGenre} from "@/shared/types";
 
 interface IMovieBannerProps {
     original_title: string,
